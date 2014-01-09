@@ -1,0 +1,17 @@
+USAGEE
+
+before:
+
+local something = require("bad")
+bad.function()
+something.function()
+
+after:
+
+require("globalsafe")
+local b,something = require("bad")
+assert(bad == nil)
+b.function()
+something.function()
+
+This is just to prevent stupid coding, not malicious code.
